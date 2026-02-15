@@ -328,6 +328,34 @@ main {
   border-color: #6b2c2c;
 }
 
+/* Comments Section Styles */
+.comments-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.comments-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.comments-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+#disqus_thread {
+  margin-top: 20px;
+}
+
+/* Disqus iframe styling for better theme integration */
+#disqus_thread iframe {
+  border-radius: 8px;
+}
+
 /* Responsive Design */
 @media (max-width: 480px) {
   .container {
@@ -338,7 +366,8 @@ main {
     font-size: 1.5rem;
   }
 
-  .partnership-section h2 {
+  .partnership-section h2,
+  .comments-section h2 {
     font-size: 1.5rem;
   }
 
