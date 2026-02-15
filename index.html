@@ -1,14 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>로또 번호 추첨기</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <div class="container">
+    <header>
+      <h1>🎰 로또 번호 추첨기</h1>
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 전환">
+        <span class="icon">🌙</span>
+      </button>
+    </header>
+
+    <main>
+      <div class="lottery-display" id="lotteryDisplay">
+        <div class="number-placeholder">
+          <span>?</span>
+          <span>?</span>
+          <span>?</span>
+          <span>?</span>
+          <span>?</span>
+          <span>?</span>
+        </div>
+      </div>
+
+      <button class="generate-btn" id="generateBtn">
+        <span>번호 추첨하기</span>
+      </button>
+
+      <div class="info">
+        <p>1부터 45까지의 숫자 중 6개의 번호가 자동으로 추첨됩니다.</p>
+      </div>
+    </main>
+  </div>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
