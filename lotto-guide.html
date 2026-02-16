@@ -16,32 +16,32 @@
       padding: 40px 20px;
     }
     .guide-content {
-      background: var(--card-bg, #fff);
+      background: var(--card-bg);
       border-radius: 15px;
       padding: 40px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px var(--shadow);
       line-height: 1.8;
     }
     .guide-content h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: var(--primary-color, #4CAF50);
+      color: var(--primary-color);
     }
     .guide-content h2 {
       font-size: 1.8rem;
       margin-top: 40px;
       margin-bottom: 20px;
-      color: var(--text-color, #333);
+      color: var(--text-primary);
     }
     .guide-content h3 {
       font-size: 1.3rem;
       margin-top: 25px;
       margin-bottom: 15px;
-      color: var(--text-color, #555);
+      color: var(--text-primary);
     }
     .guide-content p, .guide-content li {
       margin-bottom: 15px;
-      color: var(--text-color, #555);
+      color: var(--text-secondary);
       font-size: 1.05rem;
     }
     .guide-content ul, .guide-content ol {
@@ -71,6 +71,12 @@
       margin: 20px 0;
       border-radius: 5px;
     }
+
+    [data-theme="dark"] .tip-box {
+      background: rgba(102, 126, 234, 0.15);
+      color: var(--text-primary);
+    }
+
     .warning-box {
       background: #fff3e0;
       border-left: 4px solid #ff9800;
@@ -78,21 +84,10 @@
       margin: 20px 0;
       border-radius: 5px;
     }
-    .nav-menu {
-      background: var(--card-bg, #fff);
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .nav-menu a {
-      color: var(--primary-color, #4CAF50);
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: 500;
-    }
-    .nav-menu a:hover {
-      text-decoration: underline;
+
+    [data-theme="dark"] .warning-box {
+      background: rgba(255, 152, 0, 0.15);
+      color: var(--text-primary);
     }
     table {
       width: 100%;
@@ -100,13 +95,70 @@
       margin: 20px 0;
     }
     th, td {
-      border: 1px solid #ddd;
+      border: 1px solid var(--border-color);
       padding: 12px;
       text-align: left;
+      color: var(--text-primary);
     }
     th {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
+    }
+
+    [data-theme="dark"] td {
+      background: var(--bg-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .guide-content {
+        padding: 30px 20px;
+      }
+
+      .guide-content h1 {
+        font-size: 2rem;
+      }
+
+      .guide-content h2 {
+        font-size: 1.5rem;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .guide-content {
+        padding: 20px 15px;
+      }
+
+      .guide-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .guide-content h2 {
+        font-size: 1.3rem;
+      }
+
+      .guide-content h3 {
+        font-size: 1.1rem;
+      }
+
+      .stat-box h3 {
+        font-size: 1.5rem;
+      }
+
+      table {
+        font-size: 0.85rem;
+      }
+
+      th, td {
+        padding: 6px;
+      }
     }
   </style>
 </head>
@@ -124,7 +176,6 @@
       <a href="/animal-test.html">동물상 테스트</a>
       <a href="/lotto-guide.html">로또 가이드</a>
       <a href="/about.html">소개</a>
-      <a href="/privacy.html">개인정보처리방침</a>
     </nav>
 
     <div class="guide-container">

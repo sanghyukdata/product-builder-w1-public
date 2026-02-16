@@ -9,6 +9,14 @@
   --border: #e0e0e0;
   --shadow: rgba(0, 0, 0, 0.1);
   --number-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* Additional variables for consistency */
+  --primary-color: #4CAF50;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+  --footer-text: #666666;
+  --footer-text-light: #999999;
 }
 
 [data-theme="dark"] {
@@ -21,6 +29,14 @@
   --border: #404040;
   --shadow: rgba(0, 0, 0, 0.3);
   --number-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+
+  /* Additional variables for dark mode */
+  --primary-color: #66BB6A;
+  --card-bg: #2d2d2d;
+  --text-color: #e0e0e0;
+  --border-color: #404040;
+  --footer-text: #b0b0b0;
+  --footer-text-light: #888888;
 }
 
 /* Reset and Base Styles */
@@ -356,7 +372,92 @@ main {
   border-radius: 8px;
 }
 
+/* Navigation Styles */
+.nav-menu {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px var(--shadow);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-menu a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-menu a:hover {
+  background: var(--bg-primary);
+  text-decoration: none;
+}
+
+.nav-menu a:active {
+  transform: scale(0.95);
+}
+
+/* Footer Styles */
+footer {
+  background: var(--card-bg);
+  padding: 30px 20px;
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+footer a {
+  color: var(--footer-text);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+footer .footer-copyright {
+  color: var(--footer-text);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+footer .footer-tagline {
+  color: var(--footer-text-light);
+  font-size: 0.85rem;
+}
+
 /* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .nav-menu a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  footer {
+    padding: 20px 15px;
+  }
+
+  footer a {
+    display: inline-block;
+    margin: 5px 8px;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     padding: 30px 20px;
@@ -382,5 +483,15 @@ main {
   .submit-btn {
     font-size: 1rem;
     padding: 15px 30px;
+  }
+
+  .nav-menu {
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .nav-menu a {
+    font-size: 0.85rem;
+    padding: 5px 8px;
   }
 }
